@@ -20,7 +20,12 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__filename, "../public/notes.html"));
 });
 
+app.get("/api/notes", function (req, res) {
+    res.sendFile(path.join(__filename, "../db/db.json"));
+  });
 
+
+// listener
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
